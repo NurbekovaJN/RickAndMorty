@@ -11,6 +11,4 @@ const MainPage = () => {
 
 export default MainPage;
 
-/// bjajhe
-
 
