@@ -61,17 +61,21 @@ function CharacterList() {
             {characters.length > 0 ? (
                 <ul>
                     {characters.map(character => (
-                        <li className="character-li" key={character.id}>
-                            <img src={character.image} alt={character.name} style={{ width: '150px', height: '150px', borderRadius: '50%', border: '2px solid black'}} />
-                            <div className='allSpans'>
-                                <span className="character-span">{character.name} - {character.species}</span>
-                                <Link to={`/characters/${character.id}`} className='detailsLink'>                    
-                                    <Button className='linkButton'>
-                                        Подробнее
-                                    </Button>
-                                </Link>
-                            </div>
-                        </li>
+                        <Link to={`/characters/${character.id}`} className='detailsLink'>
+                            <li className="character-li" key={character.id}>
+                                <img src={character.image} alt={character.name} style={{ width: '150px', height: '150px', borderRadius: '50%', border: '2px solid black'}} />
+                                <div className='allSpans'>
+                                    <span className="character-span">{character.name} - {character.species}</span>
+
+                                    {/* <Link to={`/characters/${character.id}`} className='detailsLink'>                    
+                                        <Button className='linkButton'>
+                                            Подробнее
+                                        </Button>
+                                    </Link> */}
+
+                                </div>
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             ) : (<p>Нет персонажей для отображения.</p>)}
