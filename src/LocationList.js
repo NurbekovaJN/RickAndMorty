@@ -46,9 +46,18 @@ function LocationList(){
                 <ul>
                     {location.map(location => 
                         <li className="location-li" key={location.id}>
-                            <span className="location-span">Название - '{location.name}'</span>
-                            <span className="location-span">Измерение - {location.dimension}</span>
-                            <span className="location-span">Тип - {location.type}</span>
+                            <div className="span-div">
+                                <span>Название</span>
+                                <span className="location-span">'{location.name}'</span>
+                            </div>
+                            <div className="span-div">
+                                <span>Измерение</span>
+                                <span className="location-span">{location.dimension}</span>
+                            </div>
+                            <div className="span-div">
+                                <span>Тип</span>
+                                <span className="location-span">{location.type}</span>
+                            </div>
                         </li>
                     )}
                 </ul>

@@ -59,13 +59,32 @@ function CharacterDetails(){
             <div className="character-card">
                 <img src={character.image} alt={character.name} style={{width: '300px', height: '300px', borderRadius: '25px', border: "1px solid black"}} />
                 <div className="allSpans">
-                    <span>Имя - {character.name}</span>
-                    <span>Раса - {character.species}</span>
-                    <span>Пол -{character.gender}</span>
-                    <span>Статус - {character.status}</span>  
+                    <div className="span-div">
+                        <span>Имя - </span>
+                        <span className="character-span">{character.name}</span>
+                    </div>
+                    <div className="span-div">
+                        <span>Раса - </span>
+                        <span className="character-span">{character.species}</span>
+                    </div>
+                    <div className="span-div">
+                        <span>Пол - </span>
+                        <span className="character-span">{character.species}</span>
+                    </div>
+                    <div className="span-div">
+                        <span>Статус - </span>
+                        <span className="character-span">{character.status}</span>
+                    </div>
+                    <div className="span-div">
+                        <span>Локация - </span>
+                        <span className="character-span">{character.location.name}</span>
+                    </div>
+                    <div className="span-div">
+                        <span>Ориджин - </span>
+                        <span className="character-span">{character.origin.name}</span>
+                    </div>
+
                     {/* <span>{character.episode}</span> */}
-                    <span>Локация - {character.location.name}</span>
-                    <span>Ориджин - {character.origin.name}</span>
                 </div>
             </div>
                 <Button className="linkButton">

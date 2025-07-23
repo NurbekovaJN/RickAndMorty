@@ -45,9 +45,20 @@ function EpisodeList(){
                 <ul>
                     {episode.map(episode => (
                         <li className="episode-li" key={episode.id}>
-                            <span className="episode-span">Название серии - '{episode.name}'</span>
-                            <span className="episode-span">Эпизод - {episode.episode}</span>
-                            <span className="episode-span">Дата выхода - {episode.air_date}</span>
+                            <div className="span-div">
+                                <span span-style>Название серии</span>
+                                <span  className="episode-span">'{ episode.name}'</span>
+                            </div>
+                        
+                            <div className="span-div">
+                                <span span-style>Эпизод</span>
+                                <span className="episode-span">{episode.episode}</span>
+                            </div>
+                            
+                            <div className="span-div">
+                                <span span-style>Дата выхода</span>
+                                <span className="episode-span">{episode.air_date}</span>
+                            </div>
                         </li>
                     ))}
                 </ul>
